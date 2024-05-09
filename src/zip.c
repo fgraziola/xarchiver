@@ -68,7 +68,7 @@ static gchar *xa_zip_password_str (XArchive *archive)
 	if (archive->password)
 	{
 		escaped = xa_escape_bad_chars(archive->password, ESCAPES);
-		password_str = g_strconcat(" -P", escaped, NULL);
+		password_str = g_strconcat(" -P ", escaped, NULL);
 		g_free(escaped);
 
 		return password_str;
